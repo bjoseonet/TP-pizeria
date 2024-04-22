@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header,
+footer {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 1em; */
+  padding: 1em;
+}
+footer {
+  /* background-color: green; */
+  grid-area: footer;
+}
+
+header {
+  grid-area: header;
+  /* background-color: blue; */
+}
+
+header nav {
+  text-align: right;
+  /* background-color: blue; */
+}
+
+.main {
+  grid-area: main;
+  /* background-color: red; */
+  text-align: center;
+}
+
+.container {
+  width: 100vw;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7% 40% 40% 30%;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+
+.text-presentation {
+  margin: 2px;
+}
+
+.rights-text {
+  margin: 2px;
+}
+
+.opciones-redes {
+  flex-direction: column;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* LOGIN */
+
+.central {
+  max-width: 320px;
+  width: 95%;
+  height: 90%;
+  /* max-height: 500px; */
+  position: relative;
+  top: 5%;
+  left: 2%;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  padding: 30px 50px;
+  background-color: #ffffff4b;
+
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+
+  box-sizing: border-box;
+}
+
+.welcome {
+  color: #222222;
+}
+
+.cuadro {
+  /* width: 90%; */
+  padding: 15px 0;
+  margin: auto;
+}
+
+.cuadro input[type="email"] {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cuadro input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.cuadro .form-control {
+  right: 20%;
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.cuadro .form-control:focus {
+  z-index: 2;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc27;
+  border-radius: 5px;
+}
+
+label {
+  color: #222222;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cuadro .checkbox {
+  font-weight: 400;
+  text-align: center;
+}
+
+button[type="submit"] {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  /* background-color: #1d4e89;
+  color: #ffffff; */
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.pie-form {
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.pie-form a {
+  display: block;
+  text-decoration: none;
+  color: #222222;
+  margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+  color: #000000;
+}
+
+/* REGISTRO */
+
+.login-left {
+  max-width: 420px;
+  width: 95%;
+  height: 90%;
+  max-height: 500px;
+  position: relative;
+  top: 5%;
+  left: 5%;
+  grid-area: aside;
+}
+.login-registro {
+  width: 100%;
+  height: 100%;
+  padding: 30px 50px;
+  background-color: #ffffff4b;
+
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+
+  box-sizing: border-box;
+}
+
+.titulo-registro-01 {
+  color: #222222;
+}
+
+.titulo-registro-02 {
+  color: #222222;
+}
+
+.titulo-registro-03 {
+  color: #222222;
+}
+
+.cuadro-registro {
+  /* width: 90%; */
+  padding: 15px 0;
+  margin: auto;
+}
+
+.cuadro-registro input[type="email-registro"] {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cuadro-registro input[type="password-registro"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.cuadro-registro .form-control-registro {
+  right: 14%;
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.cuadro-registro .form-control-registro:focus {
+  z-index: 2;
+}
+
+input[type="email-registro"],
+input[type="password-registro"] {
+  width: 150%;
+  /* padding: 10px;
+  margin-bottom: 20px; */
+  border: 1px solid #cccccc27;
+  border-radius: 5px;
+}
+
+label {
+  color: #222222;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* .cuadro-registro .checkbox-registro {
+  font-weight: 400;
+  text-align: center;
+} */
+
+button[type="submit"] {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #1d4e89;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.pie-form-registro {
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.pie-form-registro a {
+  display: block;
+  text-decoration: none;
+  color: #222222;
+  margin-bottom: 3px;
+}
+
+.pie-form-registro a:hover {
+  color: #000000;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    height: 180vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8% 27% 45% 20%;
+    grid-template-areas:
+      "header "
+      "main"
+      "aside"
+      "footer ";
+  }
+  footer {
+    flex-direction: column;
+  }
+
+  .login-left {
+    /* height: 140%; */
+    max-height: 600px;
+    /* max-width: 620px; */
+    /* width: 90%;
+    height: 90%;
+    max-height: 500px;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    grid-area: aside; */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8% 77% 15%;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  }
+  footer {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    height: 100vh;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 8% 77% 15%;
+    grid-template-areas:
+      "header header "
+      "main aside "
+      "footer footer ";
+  }
+  header {
+    display: flex;
+  }
+  footer {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    height: 100vh;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 8% 77% 15%;
+    grid-template-areas:
+      "header header "
+      "main aside "
+      "footer footer ";
+  }
+  header {
+    display: flex;
+  }
+  footer {
+    flex-direction: row;
+  }
+}
