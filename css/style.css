@@ -13,32 +13,25 @@ ul {
 
 header,
 footer {
-  /* background-color: aqua;  */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  /* gap: 1em; */
   padding: 1em;
 }
 footer {
-  /* background-color: green; */
   grid-area: footer;
 }
 
 header {
   grid-area: header;
-  /* background-color: blue; */
 }
 
 header nav {
   text-align: right;
-  /* background-color: blue; */
 }
 
 .main {
   grid-area: main;
-  /* background-color: red; */
   text-align: center;
 }
 
@@ -61,11 +54,6 @@ header nav {
 .rights-text {
   margin: 2px;
 }
-
-/* .opciones-redes {
-  flex-direction: column;
-  grid-template-rows: repeat(3, 1fr);
-} */
 
 @media screen and (min-width: 768px) {
   .container {
