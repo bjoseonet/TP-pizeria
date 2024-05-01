@@ -4,11 +4,11 @@ function burguerMenu() {
   menuResponsive.classList.toggle("responsive");
 
   // Seleccionar el elemento al que deseas aplicar el CSS
-  //var headerElement = document.querySelector("header");
+  // var headerElement = document.querySelector("header");
 
   // Agregar el estilo directamente al elemento
-  //headerElement.style.gridArea = "header";
-  //headerElement.style.height = "160px";
+  // headerElement.style.gridArea = "header";
+  // headerElement.style.height = "190px";
 
   // Seleccionar el elemento al que deseas aplicar el CSS
   //var containerElement = document.querySelector(".container");
