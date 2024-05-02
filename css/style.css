@@ -1,7 +1,79 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
+
+
+/* Fuente Roboto */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+body{
+    background-color: antiquewhite;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+/* esta es una caja del centro que puse para probar columnas internas */
+
+.grid-layout{
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: auto auto auto;
+
+  width: 80%;
+  margin:0 auto;
+  background-color: lightgreen;
+  padding: 20px;
+  border: 1px solid rgb(71, 55, 216); */
+
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+    
+}
+
+.caja1 { grid-area: 1 / 1 / 2 / 6;
+  background-color: red; }
+.caja2 { grid-area: 2 / 1 / 4 / 3;
+  background-color: blue; }
+.caja3 { grid-area: 2 / 3 / 4 / 6;
+  background-color: green;  }
+.caja4 { grid-area: 4 / 3 / 6 / 6;
+  background-color: yellow;  }
+.caja5 { grid-area: 5 / 1 / 6 / 6;
+  background-color: orange;  }
+.caja6 { grid-area: 4 / 4 / 5 / 6;
+  background-color: violet; }
+
+.caja1 {
+    width: 150px;
+    height: 217px;
+    background-color: #2b5f34;
+  }  
+
+.caja .rectangle {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #70b17b;
+  }
+/* .caja {
+  width: 150px;
+  height: 150px;
+  border: 4px solid black;
+  background-color: lightgray;
+  margin: 15px;
+  text-align: center;
+  line-height: 15px;
+  float: left;
+  
+} */
 
 a {
   text-decoration: none;
@@ -22,37 +94,46 @@ footer {
   padding: 1em;
 }
 footer {
-  /* background-color: green; */
+  background-color: green; 
   grid-area: footer;
 }
 
 header {
   grid-area: header;
-  /* background-color: blue; */
+  background-color: #E94A24;  
 }
 
 header nav {
-  text-align: right;
-  /* background-color: blue; */
+  position: sticky;
+  text-align: left;
+  background-color: #E94A24; 
 }
 
 .main {
   grid-area: main;
-  /* background-color: red; */
+  background-color: red;
   text-align: center;
 }
 
 .container {
+  
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr ;
   grid-template-rows: 7% 63% 30%;
   grid-template-areas:
     "header"
     "main"
     "footer";
 }
+nav {
+  position: sticky;
+  top: 0; /* Fija la barra de navegación en la parte superior */
+  background-color: #333; /* Cambia el color de fondo según tus preferencias */
+  padding: 10px;
+}
+
 
 .text-presentation {
   margin: 2px;
@@ -60,6 +141,12 @@ header nav {
 
 .rights-text {
   margin: 2px;
+}
+
+
+/* el titulo bienvenidos a nuestra pizzeria */
+.main h1 {
+  color: aliceblue;
 }
 
 /* .opciones-redes {
