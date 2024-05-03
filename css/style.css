@@ -17,66 +17,63 @@ body{
 /* esta es una caja del centro que puse para probar columnas internas */
 
 .grid-layout{
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* grid-template-columns: auto auto auto;
-
-  width: 80%;
-  margin:0 auto;
-  background-color: lightgreen;
-  padding: 20px;
-  border: 1px solid rgb(71, 55, 216); */
-
-
+  
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+   
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat (auto-fill,minmax(15rem,1fr))
     
 }
 
-.caja1 { grid-area: 1 / 1 / 2 / 6;
+/* .caja1 { grid-area: 1 / 1 / 2 / 6;
   background-color: red; }
+
 .caja2 { grid-area: 2 / 1 / 4 / 3;
   background-color: blue; }
+
 .caja3 { grid-area: 2 / 3 / 4 / 6;
   background-color: green;  }
+  
 .caja4 { grid-area: 4 / 3 / 6 / 6;
   background-color: yellow;  }
+
 .caja5 { grid-area: 5 / 1 / 6 / 6;
   background-color: orange;  }
+
 .caja6 { grid-area: 4 / 4 / 5 / 6;
-  background-color: violet; }
+  background-color: violet; } */
 
-.caja1 {
-    width: 150px;
-    height: 217px;
-    background-color: #2b5f34;
-  }  
 
-.caja .rectangle {
-    position: fixed;
-    width: 80%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #70b17b;
-  }
-/* .caja {
-  width: 150px;
-  height: 150px;
-  border: 4px solid black;
-  background-color: lightgray;
-  margin: 15px;
-  text-align: center;
-  line-height: 15px;
-  float: left;
-  
-} */
+
+.caja1{
+  /* justify-content: left; */
+  grid-area: 1 / 1 / 2 / 6;
+  text-align: left;
+  color: aliceblue;
+  padding: 20px;
+  background-color: rgb(85, 146, 126);
+}
+.caja2{
+  grid-area: 2 / 1 / 4 / 3;
+  text-align: left;  
+  color: aliceblue;  
+  padding: 20px;
+  background-color: rgb(23, 100, 74);
+}
+.caja3{
+  grid-area: 2 / 3 / 4 / 6;
+  text-align: left;  
+  color: aliceblue;  
+  padding: 20px;
+  background-color: rgb(57, 105, 168);
+}
+
+ 
 
 a {
   text-decoration: none;
+  color: aliceblue;
 }
 
 ul {
@@ -100,7 +97,7 @@ footer {
 
 header {
   grid-area: header;
-  background-color: #E94A24;  
+  background-color: #885c51;  
 }
 
 header nav {
@@ -111,8 +108,13 @@ header nav {
 
 .main {
   grid-area: main;
-  background-color: red;
-  text-align: center;
+  background-color: rgb(11, 212, 11);
+  text-align: left;
+  display: grid;
+   
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat (auto-fill,minmax(15rem,1fr))
 }
 
 .container {
@@ -120,8 +122,9 @@ header nav {
   width: 100vw;
   /* height: 100vh; */
   display: grid;
+  
   grid-template-columns: 1fr ;
-  grid-template-rows: 7% 63% 30%;
+  grid-template-rows: 50% 20% 30%;
   grid-template-areas:
     "header"
     "main"
@@ -148,7 +151,7 @@ nav {
 .main h1 {
   color: aliceblue;
 }
-
+ 
 /* .opciones-redes {
   flex-direction: column;
   grid-template-rows: repeat(3, 1fr);
