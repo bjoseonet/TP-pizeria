@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Aplicar la fuente Roboto */
     background-color: #dbcbb3;
     padding: 20px;
 }
@@ -9,18 +9,32 @@ header, footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-}
-
-header {
-    padding: 10px ;
     margin-bottom: 20px;
 }
 
+
+
+main p {
+    margin-bottom: 20px; /* Agrega un espacio entre párrafos */
+    line-height: 1.6; /* Ajusta la altura de línea para mejorar la legibilidad */
+    color: #444; /* Cambia el color del texto */
+    font-size: 18px; /* Ajusta el tamaño de fuente */
+    font-family: 'Roboto', Arial, sans-serif; /* Utiliza la fuente Roboto */
+    text-align: justify; /* Justifica el texto para una apariencia más limpia */
+    padding: 10px; /* Agrega un relleno interior para separar el texto del borde */
+    max-width: 80%;
+    margin-left: 9%;
+}
 
 main {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
+}
+
+.title {
+    font-weight: 800;
+    color: #2d642d
 }
 
 form {
@@ -45,7 +59,6 @@ select {
     box-sizing: border-box;
 }
 
-
 input[type="submit"] {
     background-color: #333;
     color: #fff;
@@ -63,4 +76,57 @@ input[type="submit"]:hover {
 
 input[type="file"] {
     margin-bottom: 15px;
+}
+
+.container {
+    width: calc(100% - 40px); /* Ajustar al ancho del body sin incluir los márgenes */
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(236, 148, 49, 0.7);
+    color: #06936b;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+}
+
+
+.container a {
+    text-decoration: none; 
+    color: #06936b; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+}
+
+.container a:hover {
+    text-decoration: underline; /* Añadir subrayado al pasar el cursor */
+}
+
+nav a {
+    color: #06936b; /* Cambiar color de texto para los enlaces dentro de nav */
+}
+
+h1 {
+    font-family: 'Titan One', sans-serif;
+    color: #06936b;
+}
+
+/* Estilos para el carrusel */
+.fachada {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    display: flex;
+    justify-content: space-between; /* Distribuye uniformemente las imágenes */
+    overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
+}
+
+.slide {
+    max-width: 30%; /* Establece un ancho máximo para cada imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    max-height: 30%; /* Establece una altura máxima para cada imagen */
+}
+
+.slide:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
 }
