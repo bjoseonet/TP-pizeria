@@ -95,7 +95,8 @@ footer {
   display: grid;
   justify-content: space-between;
   max-width: 100%;
-  background-color: #2e79d4;
+  /* background-color: #2e79d4; */
+  background-color: #ec9431;
 }
 
 footer {
