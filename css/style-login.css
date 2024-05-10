@@ -1,5 +1,5 @@
 :root {
-  --var-color-primario: #1d4e89;
+  --var-color-primario: #ec9431;
   --var-color-secundario: #00b2ca2f;
   --var-color-terciario: #3fc1c0;
   --var-color-titulos: ;
@@ -55,8 +55,26 @@ header {
   color: #ffffff;
 }
 
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "navbar navbar navbar";
+  grid-area: header;
+  /* height: 50px; */
+  background-color: var(--var-color-primario);
+  background-image: none;
+  z-index: 1;
+}
+
 .topnav {
-  margin-top: 25px;
+  overflow: hidden;
+}
+
+.topnav {
+  margin-top: 5px;
 }
 
 .topnav a {
@@ -69,6 +87,17 @@ header {
 
 .topnav .icon {
   display: none;
+}
+
+.topnav a.active {
+  color: white;
+  padding: 0;
+}
+
+.navbar {
+  /* grid-area: navbar; */
+  width: 100%;
+  height: 50px;
 }
 
 .container {
@@ -125,16 +154,19 @@ header {
 /* LOGIN */
 
 .central {
-  max-width: 95%;
-  height: 95%;
+  max-width: 94%;
+  height: 98%;
   position: relative;
-  top: 2%;
+  /* top: 2px; */
+  top: 1%;
   left: 5%;
+  grid-area: main;
 }
 
 .login {
-  max-width: 95%;
-  height: 95%;
+  max-width: 94%;
+  height: 98%;
+  position: relative;
   padding: 5px 5px;
   background-color: #ffffff4b;
 
@@ -147,7 +179,6 @@ header {
   -webkit-border-radius: 3px 3px 3px 3px;
 
   box-sizing: border-box;
-  grid-area: main;
 }
 
 .welcome {
@@ -237,16 +268,16 @@ button[type="submit"]:hover {
 /* REGISTRO */
 
 .login-left {
-  max-width: 95%;
-  height: 95%;
+  max-width: 94%;
+  height: 98%;
   position: relative;
-  top: 2%;
+  top: 1%;
   left: 2%;
   grid-area: aside;
 }
 .login-registro {
-  max-width: 95%;
-  height: 95%;
+  max-width: 94%;
+  height: 98%;
   padding: 5px 5px;
   background-color: #ffffff4b;
 
@@ -352,7 +383,7 @@ button[type="submit"]:hover {
   .container {
     height: 170vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 5% 20% 45% 23%;
+    grid-template-rows: 4% 20% 42% 26%;
     grid-template-areas:
       "header "
       "main"
@@ -389,13 +420,13 @@ button[type="submit"]:hover {
 @media screen and (max-width: 455px) {
   .container {
     height: 165vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 13% 20% 41% 25%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4% 21% 48% 27%;
     grid-template-areas:
-      "header "
-      "main"
-      "aside"
-      "footer ";
+      "header header header"
+      "main main main"
+      "aside aside aside"
+      "footer footer footer";
   }
 
   .login-left {
@@ -403,12 +434,37 @@ button[type="submit"]:hover {
     left: 5%;
   }
 
-  header {
+  .navbar {
+    grid-area: navbar;
+    width: 100%;
+    height: 50px;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "navbar navbar navbar";
     grid-area: header;
-    height: 190px;
+    height: 50px;
+    background-color: var(--var-color-primario);
+    background-image: none;
+  }
+
+  /* header {
+    grid-area: header;
+    height: 80px;
+  } */
+
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 
   .topnav {
+    /* float: right; */
     margin-top: 5px;
   }
 
@@ -417,8 +473,9 @@ button[type="submit"]:hover {
   }
 
   .topnav a.icon {
+    float: right;
     display: block;
-    height: 50px;
+    /* height: 50px; */
   }
 
   .topnav.responsive {
@@ -433,6 +490,7 @@ button[type="submit"]:hover {
     float: none;
     display: block;
     text-align: left;
+    background-color: var(--var-color-primario);
     background-image: none;
   }
 
@@ -459,7 +517,7 @@ button[type="submit"]:hover {
   .container {
     height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8% 75% 15%;
+    grid-template-rows: 6% 78% 16%;
     grid-template-areas:
       "header header"
       "main aside"
@@ -496,7 +554,7 @@ button[type="submit"]:hover {
 @media screen and (min-width: 1024px) {
   .container {
     height: 100vh;
-    grid-template-rows: 8% 75% 15%;
+    grid-template-rows: 6% 78% 15%;
     grid-template-areas:
       "header header "
       "main aside "
@@ -519,7 +577,7 @@ button[type="submit"]:hover {
 @media screen and (min-width: 1440px) {
   .container {
     height: 100vh;
-    grid-template-rows: 8% 75% 15%;
+    grid-template-rows: 6% 78% 15%;
     grid-template-areas:
       "header header "
       "main aside "
@@ -531,7 +589,8 @@ button[type="submit"]:hover {
 
   header {
     grid-area: header;
-    height: 80px;
+    /* height: 80px; */
+    justify-content: space-between;
   }
 
   footer {
