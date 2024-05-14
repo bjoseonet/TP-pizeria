@@ -4,75 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIZZAS - Pizzería "X"</title>
     <link rel="stylesheet" href="../css/style-contacto.css">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-
+    <script src="https://kit.fontawesome.com/19d2c6b17a.js" crossorigin="anonymous"></script>
+    <title>Pizeria, ofertas, promociones, muzarella</title>
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <a href="../index.html">Inicio</a>
-            <a href="../login/login.html">Iniciar Sesión</a>
-            <a href="../contacto/contacto.html">Contáctenos</a>
-            <a href="../nosotros/nosotros.html">Nosotros</a>
-        </nav>
-        <h1 class="title">CONTACTANOS</h1>
-        <p>Si usted desea contactarse con nosotros por cualquier duda o comentario, complete el siguiente formulario</p>
+    <div class="container">
+        <header></header>
+
+        <main>
+            <h1 class="title">CONTACTANOS</h1>
+            <p>Si usted desea contactarse con nosotros por cualquier duda o comentario, complete el siguiente formulario
+            </p>
+
+            <h2>Envíanos un mensaje</h2>
+
+            <form method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="motivo">Motivo de contacto:</label>
+                <select name="motivo">
+                    <option value="consulta">Consulta</option>
+                    <option value="comentario">Comentario</option>
+                    <option value="queja">Queja</option>
+                    <option value="sugerencia">Sugerencia</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <label for="imagen">Subir imagen:</label>
+                <input type="file" name="imagen">
+
+                <div>
+                    <input type="checkbox" name="suscripcion">
+                    <label for="suscripcion">Suscribirme al Newsletter</label>
+                </div>
+
+                <input type="submit" value="Enviar">
+
+            </form>
+        </main>
+
+        <footer></footer>
+    </div>
+    <script>
+        function validateForm() {
+            let nombre = document.getElementById('nombre').value;
+            let email = document.getElementById('email').value;
+            let mensaje = document.getElementById('mensaje').value;
 
 
-    </header>
-
-
-    <main>
-        <h2>Envíanos un mensaje</h2>
-
-        <form method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="motivo">Motivo de contacto:</label>
-            <select name="motivo">
-                <option value="consulta">Consulta</option>
-                <option value="comentario">Comentario</option>
-                <option value="queja">Queja</option>
-                <option value="sugerencia">Sugerencia</option>
-            </select>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-            <label for="imagen">Subir imagen:</label>
-            <input type="file" name="imagen">
-
-            <div>
-                <input type="checkbox" name="suscripcion">
-                <label for="suscripcion">Suscribirme al Newsletter</label>
-            </div>
-
-            <input type="submit" value="Enviar">
-
-
-
-        </form>
-    </main>
-
-    <footer>
-        <div>
-            <h3>Contacto</h3>
-            <p>Dirección: Calle de la Pizza, Número 123</p>
-            <p>Teléfono: 011-123-4567</p>
-            <p>Correo electrónico: info@pizzeria.com</p>
-        </div>
-        <div>
-            <img src="logo.png" alt="Logo de la pizzería">
-        </div>
-    </footer>
+            if (nombre.trim() === '' || email.trim() === '' || mensaje.trim() === '') {
+                alert('Por favor, completa todos los campos obligatorios.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script src="/index.js"></script>
+    <script src="/elements.js"></script>
 </body>
 
 </html>
