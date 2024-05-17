@@ -1,7 +1,7 @@
 let header = (document.querySelector("header").innerHTML = `
 <div class="navbar">
 <div class="topnav" id="myTopnav">
-    <img class="logo" src="../img/logopizzcode.svg" width="32" height="32" alt="logo">
+    <img class="logo" src="../img/logopizzcode.svg" alt="logo">
     <a href="../index.html">HOME</a>
     <a href="../nosotros/nosotros.html">NOSOTROS</a>
     <a href="../contacto/contacto.html">CONTACTENOS</a>

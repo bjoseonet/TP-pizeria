@@ -18,7 +18,6 @@ header {
   background-color: #e94a24; /* Color de fondo */
   display: flex;
   justify-content: space-between;
-  padding: 0.5em;
 }
 
 .topnav {
@@ -82,7 +81,6 @@ footer {
 
 /* Estilos generales */
 body {
-  /* background-color: antiquewhite; */
   font-family: "Roboto", monospace;
   text-align: center;
 }
@@ -137,7 +135,7 @@ button {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-rows: 0.2fr 1fr 1.2fr 0.8fr;
   grid-template-areas:
     "nav nav nav"
     "main main main"
@@ -150,8 +148,14 @@ button {
 }
 
 .logo {
-  width: 30px;
+  width: 32px;
   height: auto;
+  margin-top: 3px;
+}
+
+.topnav .logo {
+  float: left;
+  display: block;
 }
 
 main {
@@ -262,7 +266,7 @@ main {
   .navbar {
     grid-area: navbar;
     width: 100%;
-    height: 50px;
+    height: 65px;
   }
 
   header {
@@ -270,17 +274,12 @@ main {
     font-family: "Roboto Condensed", sans-serif;
     background-color: #e94a24; /* Color de fondo */
     display: flex;
+    height: 65px;
     justify-content: space-between;
-    padding: 0.5em;
-  }
-
-  *::before,
-  *::after {
-    box-sizing: border-box;
   }
 
   .topnav {
-    margin-top: 5px;
+    margin-top: 15px;
     display: block;
   }
 
