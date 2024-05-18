@@ -32,3 +32,34 @@ let footer = (document.querySelector("footer").innerHTML = `
 `);
 
 footer.innerHTML += footer;
+
+const form = document.querySelector(".cuadro-registro");
+const password__01 = document.querySelector("#inputPassword__registro1");
+const password__02 = document.querySelector("#inputPassword__registro2");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const password01 = password__01.value.trim();
+  const password02 = password__02.value.trim();
+
+  let erroresValidacion = false;
+
+  if (password01 != password02) {
+    erroresValidacion = true;
+
+    const error = document.querySelector(".error");
+    error.textContent = "Las contraseñas deben ser iguales";
+
+    setTimeout(() => {
+      error.textContent = "";
+      document.querySelector("#inputPassword__registro1").value = "";
+      document.querySelector("#inputPassword__registro2").value = "";
+      document.getElementById(`inputPassword__registro1`).focus();
+    }, 2000);
+  }
+
+  /*   if (erroresValidacion) {
+  }
+ */
+});
