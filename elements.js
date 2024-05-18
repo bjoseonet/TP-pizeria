@@ -34,8 +34,33 @@ let footer = (document.querySelector("footer").innerHTML = `
 footer.innerHTML += footer;
 
 const form = document.querySelector(".cuadro-registro");
+
+const inputNombre = document.querySelector("#inputNombre");
+const inputApellido = document.querySelector("#inputApellido");
+const inputCodPostal = document.querySelector("#inputCodPostal");
+const inputEmail__registro = document.querySelector("#inputEmail__registro");
+
 const password__01 = document.querySelector("#inputPassword__registro1");
 const password__02 = document.querySelector("#inputPassword__registro2");
+
+function validarInputNombre(inputNombre) {
+  // const inputNombre = document.querySelector("#inputNombre");
+  let erroresValidacion = false;
+  // alert(inputNombre);
+  if (inputNombre.length < 2) {
+    erroresValidacion = true;
+
+    const errorInputNombre = document.querySelector(".errorInputNombre");
+    errorInputNombre.textContent =
+      "El nombre tiene que tener 2 caracteres o mas";
+
+    setTimeout(() => {
+      errorInputNombre.textContent = "";
+      document.querySelector("#inputNombre").value = "";
+      document.getElementById(`inputNombre`).focus();
+    }, 2000);
+  }
+}
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();

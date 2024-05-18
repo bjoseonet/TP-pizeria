@@ -51,7 +51,8 @@
 
                     <form class="cuadro-registro">
                         <input type="text" id="inputNombre" class="form-control-registro" placeholder="Tu nombre *"
-                            minlength="1" maxlength="100" required required>
+                            onchange=" validarInputNombre(this.value)" required>
+                        <div class="errorInputNombre"></div>
                         <input type="text" id="inputApellido" class="form-control-registro" placeholder="Tu apellido *"
                             minlength="1" maxlength="100" required>
                         <input type="text" id="inputCodPostal" class="form-control-registro"
