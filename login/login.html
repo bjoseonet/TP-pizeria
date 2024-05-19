@@ -24,9 +24,9 @@
                     <h2 class="welcome">¿Tenes una Cuenta?</h2>
                     <h4 class="titulo-registro-03">* Campos obligatorios</h4>
                     <form class="cuadro">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Ingresá tu E-mail *"
-                            required autofocus>
-                        <input type="password" id="inputPassword" class="form-control"
+                        <input title="ingresa un email valido" type="email" id="inputEmail" class="form-control"
+                            placeholder="Ingresá tu E-mail *" required autofocus>
+                        <input title="ingresa tu contraseña" type="password" id="inputPassword" class="form-control"
                             placeholder="Ingresá tu Contraseña *" minlength="8" maxlength="20" required>
                         <div class="checkbox">
                             <label>
@@ -50,23 +50,28 @@
                     <h4 class="titulo-registro-03">* Campos obligatorios</h4>
 
                     <form class="cuadro-registro">
-                        <input type="text" id="inputNombre" class="form-control-registro" placeholder="Tu nombre *"
+                        <input title="el nombre debe tener como minimo 2 caracteres" type="text" id="inputNombre"
+                            class="form-control-registro" placeholder="Tu nombre *"
                             onchange=" validarInputNombre(this.value)" required>
                         <div class="errorInputNombre"></div>
-                        <input type="text" id="inputApellido" class="form-control-registro" placeholder="Tu apellido *"
-                            minlength="1" maxlength="100" required>
-                        <input type="text" id="inputCodPostal" class="form-control-registro"
-                            placeholder="Código Postal *" minlength="4" maxlength="20" required>
+                        <input title="el apellido debe tener como minimo 2 caracteres" type="text" id="inputApellido"
+                            class="form-control-registro" placeholder="Tu apellido *" minlength="1" maxlength="100"
+                            required>
+                        <input title="el codigo postal debe tener como minimo 2 caracteres y maximo 20" type="text"
+                            id="inputCodPostal" class="form-control-registro" placeholder="Código Postal *"
+                            minlength="4" maxlength="20" required>
 
                         <h3 class="titulo-registro-01">DATOS DE ACCESO</h3>
                         <h3 class="titulo-registro-02">Necesitarás estos datos para acceder a la página</h3>
 
-                        <input type="email" id="inputEmail__registro" class="form-control-registro"
-                            placeholder="E-mail *" required>
-                        <input type="password" id="inputPassword__registro1" class="form-control-registro"
-                            placeholder="Contraseña *" minlength="4" maxlength="20" required>
-                        <input type="password" id="inputPassword__registro2" class="form-control-registro"
-                            placeholder="Confirma tu Contraseña *" minlength="4" maxlength="20" required>
+                        <input title="ingresa un email valido" type="email" id="inputEmail__registro"
+                            class="form-control-registro" placeholder="E-mail *" required>
+                        <input title="ingresa una contraseña" type="password" id="inputPassword__registro1"
+                            class="form-control-registro" placeholder="Contraseña *" minlength="4" maxlength="20"
+                            required>
+                        <input title="repite la contraseña anterior" type="password" id="inputPassword__registro2"
+                            class="form-control-registro" placeholder="Confirma tu Contraseña *" minlength="4"
+                            maxlength="20" required>
                         <div class="error"></div>
 
 

@@ -9,7 +9,7 @@
   --var-color-botones-oscuros: #bc2216;
   --var-color-footer: #1d946b;
 
-  --var-color-titulos: ;
+  --var-color-titulos: #222222;
   --var-color-resaltado: ;
   --var-color-tranparente: ;
   --var-color-body: linear-gradient(
@@ -33,6 +33,9 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+/* main {
+  height: 100%;
+} */
 
 a {
   text-decoration: none;
@@ -67,7 +70,7 @@ footer {
 
 header {
   grid-area: header;
-  height: 65px;
+  /* height: 65px; */
   color: #ffffff;
 }
 
@@ -190,18 +193,19 @@ main {
   display: flex;
 }
 
-.redes {
+/* .redes {
   max-width: 95%;
 }
-.redes h3 {
-  text-align: center;
-}
 
-.opcionesRedes > ul {
+footer h3 {
+  text-align: right;
+} */
+
+/* .opcionesRedes > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /* LOGIN */
 
@@ -232,7 +236,7 @@ main {
 }
 
 .welcome {
-  color: #222222;
+  color: var(--var-color-titulos);
 }
 
 .cuadro {
@@ -241,15 +245,19 @@ main {
 }
 
 .cuadro input[type="email"] {
-  margin-bottom: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  margin-bottom: 20px;
+  /* border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; */
+  border-radius: 5px;
+  /* cursor: default; */
 }
 
 .cuadro input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  margin-bottom: 20px;
+  /* border-top-left-radius: 0;
+  border-top-right-radius: 0; */
+  border-radius: 5px;
+  /* cursor: default; */
 }
 
 .cuadro .form-control {
@@ -272,10 +280,12 @@ input[type="password"] {
   margin-bottom: 20px;
   border: 1px solid #cccccc27;
   border-radius: 5px;
+  cursor: default;
 }
 
 label {
-  color: #222222;
+  /* color: #222222; */
+  color: var(--var-color-titulos);
   display: block;
   margin-bottom: 10px;
 }
@@ -307,7 +317,8 @@ button[type="submit"]:hover {
 .pie-form a {
   display: block;
   text-decoration: none;
-  color: #222222;
+  /* color: #222222; */
+  color: var(--var-color-titulos);
   margin-bottom: 3px;
 }
 
@@ -344,15 +355,20 @@ button[type="submit"]:hover {
 }
 
 .titulo-registro-01 {
-  color: #222222;
+  /* color: #222222; */
+  color: var(--var-color-titulos);
 }
 
 .titulo-registro-02 {
-  color: #222222;
+  /* color: #222222; */
+  color: var(--var-color-titulos);
+  margin-bottom: 5px;
 }
 
 .titulo-registro-03 {
-  color: #222222;
+  /* color: #222222; */
+  margin-top: 5px;
+  color: var(--var-color-primario);
 }
 
 .cuadro-registro {
@@ -391,11 +407,11 @@ input[type="password-registro"] {
   border-radius: 5px;
 }
 
-label {
+/* label {
   color: #222222;
   display: block;
   margin-bottom: 10px;
-}
+} */
 
 button[type="submit"] {
   text-align: center;
@@ -422,7 +438,8 @@ button[type="submit"]:hover {
 .pie-form-registro a {
   display: block;
   text-decoration: none;
-  color: #222222;
+  /* color: #222222; */
+  color: var(--var-color-titulos);
   margin-bottom: 3px;
 }
 
@@ -445,7 +462,7 @@ button[type="submit"]:hover {
   main {
     display: block;
     background-color: var(--var-color-secundario);
-    line-height: 1;
+    /* line-height: 1; */
   }
 }
 
@@ -462,12 +479,12 @@ button[type="submit"]:hover {
     left: 3%;
   }
 
-  .mapa {
+  /* .mapa {
     max-width: 95%;
   }
   .mapa h3 {
     text-align: center;
-  }
+  } */
 }
 
 @media screen and (max-width: 455px) {
@@ -548,12 +565,12 @@ button[type="submit"]:hover {
       "footer ";
   }
 
-  .mapa {
+  /* .mapa {
     max-width: 95%;
   }
   .mapa h3 {
     text-align: center;
-  }
+  } */
 }
 
 @media screen and (min-width: 768px) {
@@ -569,7 +586,7 @@ button[type="submit"]:hover {
 
   header {
     grid-area: header;
-    height: 65px;
+    /* height: 65px; */
   }
 
   main {
@@ -615,7 +632,7 @@ button[type="submit"]:hover {
 @media screen and (min-width: 1024px) {
   .container {
     height: 100vh;
-    grid-template-rows: 8% 82% 10%;
+    grid-template-rows: 8.3% 81.7% 10%;
     grid-template-areas:
       "header  "
       "main  "
