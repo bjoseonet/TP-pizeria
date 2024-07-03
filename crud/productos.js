@@ -5,7 +5,8 @@ createApp({
   data() {
     return {
       productos: [], // Almacena los productos obtenidos del backend
-      url: 'http://localhost:3000/product', // URL local
+      url: 'https://bjoseonet.alwaysdata.net/product', // URL alwaysdata
+      //      url: 'http://localhost:3000/product', // URL local
       //url: "https://mysql-bjoseonet.alwaysdata.net /product", // URL del backend donde se encuentran los productos
       error: false,
       cargando: true,

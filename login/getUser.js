@@ -1,4 +1,5 @@
-const apiUrl = 'http://localhost:3000';
+const apiUrl = 'https://bjoseonet.alwaysdata.net';
+//const apiUrl = 'http://localhost:3000';
 //const apiUrl = 'http://mysql-bjoseonet.alwaysdata.net';
 
 var datosLogin = [];

@@ -20,7 +20,8 @@ createApp({
       zip: '',
       password: '',
       fecha: '',
-      url: 'http://localhost:3000/usuarios/' + id,
+      url: 'https://bjoseonet.alwaysdata.net/usuarios/' + id,
+      //      url: 'http://localhost:3000/usuarios/' + id,
     };
   },
 

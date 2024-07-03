@@ -14,7 +14,8 @@ createApp({
       usuario: '',
       fecha: '',
       comentario: '',
-      url: 'http://localhost:3000/coment/' + id,
+      url: 'https://bjoseonet.alwaysdata.net/coment/' + id,
+      //      url: 'http://localhost:3000/coment/' + id,
     };
   },
 
