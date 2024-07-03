@@ -5,7 +5,8 @@ createApp({
   data() {
     return {
       usuarios: [], // Almacena los usuarios obtenidos del backend
-      url: 'http://localhost:3000/usuarios', // URL local
+      url: 'https://bjoseonet.alwaysdata.net/usuarios', // URL alwaysdata
+      //      url: 'http://localhost:3000/usuarios', // URL local
       //url: "https://mysql-bjoseonet.alwaysdata.net /product", // URL del backend donde se encuentran los usuarios
       error: false,
       cargando: true,

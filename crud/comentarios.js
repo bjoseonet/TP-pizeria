@@ -5,7 +5,8 @@ createApp({
   data() {
     return {
       comentarios: [], // Almacena los comentarios obtenidos del backend
-      url: 'http://localhost:3000/coment', // URL local
+      url: 'https://bjoseonet.alwaysdata.net/coment', // URL alwaysdata
+      //      url: 'http://localhost:3000/coment', // URL local
       error: false,
       cargando: true,
       // Atributos para almacenar los valores del formulario

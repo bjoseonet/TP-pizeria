@@ -100,8 +100,8 @@ if (!erroresValidacion) {
       localStorage.setItem('datosRegistro', JSON.stringify(datosRegistro));
       console.log(store);
       storeUser(store);
-      form.reset();
-      window.open('../index.html', '_self');
+      //form.reset();
+      //window.open('../index.html', '_self');
     }
   });
 }

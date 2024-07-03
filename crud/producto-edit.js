@@ -16,7 +16,8 @@ createApp({
       imagen: '',
       descripcion: '',
       precio: 0,
-      url: 'http://localhost:3000/product/' + id,
+      url: 'https://bjoseonet.alwaysdata.net/product/' + id,
+      //url: 'http://localhost:3000/product/' + id,
     };
   },
 
