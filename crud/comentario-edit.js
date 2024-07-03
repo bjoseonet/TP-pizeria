@@ -3,25 +3,20 @@ var id = location.search.substr(4); // Obtiene el valor del argumento 'id' de la
 console.log(id);
 const { createApp } = Vue;
 var Code = 0;
-var Name = '';
-var Descripcion = '';
-var Price = 0;
-var Imagen = '';
+var Usuario = '';
+var Comentario = '';
+var Fecha = '';
 createApp({
   data() {
     return {
       // Inicializa las variables
       id: 0,
-      nombre: '',
-      imagen: '',
-      descripcion: '',
-      precio: 0,
-      url: 'http://localhost:3000/product/' + id,
+      usuario: '',
+      fecha: '',
+      comentario: '',
+      url: 'http://localhost:3000/coment/' + id,
     };
   },
-  /*
-      url: "https://jose14056411.pythonanywhere.com/productos/" + id,
-  */
 
   methods: {
     fetchData(url) {
@@ -30,10 +25,9 @@ createApp({
         .then((data) => {
           console.log(data);
           this.id = Code = data.id;
-          this.nombre = Name = data.product_name;
-          this.imagen = Imagen = data.image;
-          this.descripcion = Descripcion = data.description;
-          this.precio = Price = data.price;
+          this.usuario = Usuario = data.usuario;
+          this.fecha = Fecha = data.date_coment;
+          this.comentario = Comentario = data.coment;
         })
         .catch((err) => {
           console.error(err);
@@ -41,14 +35,13 @@ createApp({
         });
     },
     modificar() {
-      let producto = {
-        product_name: this.nombre,
-        price: this.precio,
-        description: this.descripcion,
-        image: this.imagen,
+      let comentario = {
+        usuario: this.usuario,
+        coment: this.comentario,
+        date_coment: this.fecha,
       };
       var options = {
-        body: JSON.stringify(producto),
+        body: JSON.stringify(comentario),
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         redirect: 'follow',
@@ -57,7 +50,7 @@ createApp({
         .then(function () {
           console.log('Registro actualizado!');
           //alert('Registro actualizado!');
-          window.location.href = './crudproduct.html';
+          window.location.href = './crudcoment.html';
         })
         .catch((err) => {
           console.error(err);
@@ -65,7 +58,7 @@ createApp({
         });
     },
     volver() {
-      window.location.href = './crudproduct.html'; // Redirigir a la página de productos
+      window.location.href = './crudcoment.html'; // Redirigir a la página de cometarios
     },
   },
   created() {

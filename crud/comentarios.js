@@ -10,8 +10,8 @@ createApp({
       cargando: true,
       // Atributos para almacenar los valores del formulario
       id: 0,
-      usuario: 0,
-      comententario: '',
+      usuario: '',
+      comentario: '',
       fecha: '',
     };
   },
@@ -51,8 +51,8 @@ createApp({
     grabar() {
       let comentario = {
         coment: this.comentario,
-        usuario: this.usuario,
-        datre_coment: this.fecha,
+        email: this.usuario,
+        // date_coment: this.fecha,
       };
 
       // Configurar las opciones para la solicitud fetch

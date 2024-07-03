@@ -24,7 +24,8 @@
         <main>
             <h1>Usuarios</h1>
             <br>
-            <a class="btn btn-primary btn-animate" href="usuario-create.html">Nuevo</a>
+            <a class="btn btn-primary btn-animate" href="#">Nuevo</a>
+            <!-- <a class="btn btn-primary btn-animate" href="usuario-create.html">Nuevo</a> -->
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos, ha ocurrido un error.</p>
@@ -64,7 +65,7 @@
                                         <!-- Botón para editar el usuario -->
                                         <a class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
                                             title="Click para modificar datos del usuario"
-                                            :href="'usuario-update.html?id='+ usuario.id">Editar </a>
+                                            :href="'usuario-update.html?id='+ usuario.email">Editar </a>
                                         <!-- Botón para eliminar el usuario -->
                                         <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>
                                         <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
