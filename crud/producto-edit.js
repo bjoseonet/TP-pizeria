@@ -19,9 +19,6 @@ createApp({
       url: 'http://localhost:3000/product/' + id,
     };
   },
-  /*
-      url: "https://jose14056411.pythonanywhere.com/productos/" + id,
-  */
 
   methods: {
     fetchData(url) {

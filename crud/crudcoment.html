@@ -24,8 +24,8 @@
         <main>
             <h1>Comentarios</h1>
             <br>
-            <a class="btn btn-primary btn-animate" href="#">Nuevo</a>
-            <!-- <a class="btn btn-primary btn-animate" href="comentario-create.html">Nuevo</a> -->
+            <!-- <a class="btn btn-primary btn-animate" href="#">Nuevo</a> -->
+            <a class="btn btn-primary btn-animate" href="comentario-create.html">Nuevo</a>
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos, ha ocurrido un error.</p>
@@ -52,7 +52,7 @@
                                 <!-- Iterar sobre cada comentario -->
                                 <tr class="" v-for="comentario in comentarios">
                                     <td scope="row">{{comentario.id}}</td>
-                                    <td>{{comentario.usuario}}</td>
+                                    <td>{{comentario.email}}</td>
                                     <td>{{comentario.coment}}</td>
                                     <td>{{comentario.date_coment}}</td>
                                     <td>
